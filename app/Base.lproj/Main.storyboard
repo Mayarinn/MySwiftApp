@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IfE-0Y-hyn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="First View Controller">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cx-KZ-sJ6">
+                                <rect key="frame" x="143" y="227.5" width="128.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="your name, Stranger" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cg0-HD-xsp">
+                                <rect key="frame" x="127" y="458" width="160" height="34"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
+                                <connections>
+                                    <action selector="makingNamed:" destination="BYZ-38-t0r" eventType="touchDragEnter" id="h5W-rx-qzB"/>
+                                    <action selector="makingNamed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="l1S-cV-kWc"/>
+                                    <action selector="makingNamed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lNq-Rc-Zag"/>
+                                    <action selector="makingNamed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qoq-5e-6hn"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30l-xP-zX4">
+                                <rect key="frame" x="171.5" y="275" width="71" height="20.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ovI-OI-BV3">
+                                <rect key="frame" x="157" y="564" width="100" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHN-G8-R0c">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <state key="normal" title="Equation solve">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="2g0-pd-3FT" kind="show" id="cnP-D5-4Kc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGL-5X-etH">
+                                        <rect key="frame" x="0.0" y="30" width="100" height="30"/>
+                                        <state key="normal" title="Second task">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cg0-HD-xsp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8gu-wg-Ucf"/>
+                            <constraint firstItem="ovI-OI-BV3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.25" id="Dew-P4-7ek"/>
+                            <constraint firstItem="ovI-OI-BV3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GPM-NI-Rba"/>
+                            <constraint firstItem="ovI-OI-BV3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="R5g-Yn-v4v"/>
+                            <constraint firstItem="7cx-KZ-sJ6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="TA2-Sh-Y87"/>
+                            <constraint firstItem="cg0-HD-xsp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Uda-h7-GYQ"/>
+                            <constraint firstItem="7cx-KZ-sJ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YI7-0E-Kmv"/>
+                            <constraint firstItem="30l-xP-zX4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dtv-z7-eiT"/>
+                            <constraint firstItem="30l-xP-zX4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.6" id="thy-jI-npu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vau-fp-4Zt"/>
+                    <connections>
+                        <outlet property="EquationSolveButton" destination="iHN-G8-R0c" id="1My-Fk-dlw"/>
+                        <outlet property="Label2" destination="30l-xP-zX4" id="CxT-xr-mrl"/>
+                        <outlet property="NameField" destination="cg0-HD-xsp" id="iqe-HC-vo5"/>
+                        <outlet property="NameInsert" destination="7cx-KZ-sJ6" id="JPj-Fn-zGw"/>
+                        <outlet property="StackOfTasks" destination="ovI-OI-BV3" id="4IV-5Z-e7R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="124"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="oAM-WM-EWG">
+            <objects>
+                <viewController id="2g0-pd-3FT" userLabel="Second View Controller" customClass="SecondViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AUa-08-0TS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BcW-9c-n80">
+                                <rect key="frame" x="126.5" y="414.5" width="161" height="121"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kBJ-WK-CYq">
+                                        <rect key="frame" x="0.0" y="0.0" width="161" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <segments>
+                                            <segment title="Easy"/>
+                                            <segment title="Hard"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="DifficultySwitch:" destination="2g0-pd-3FT" eventType="valueChanged" id="UKm-J6-7K8"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-Xh-Fib" userLabel="EasyEquation1">
+                                        <rect key="frame" x="0.0" y="31" width="161" height="30"/>
+                                        <state key="normal" title="1. R = 3t^2 + 3l^5 + 4,9">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Jn3-Cn-IVv" kind="show" id="U5D-HG-pgh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJ0-S5-tJ9" userLabel="EasyEquation2">
+                                        <rect key="frame" x="0.0" y="61" width="161" height="30"/>
+                                        <state key="normal" title="2. K = ln(p^2) + e^p">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Jn3-Cn-IVv" kind="show" id="nYI-vT-dRZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebD-M3-NAT" userLabel="EasyEquation3">
+                                        <rect key="frame" x="0.0" y="91" width="161" height="30"/>
+                                        <state key="normal" title="3. G = n(y+3,5)+sqrt(y)">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Jn3-Cn-IVv" kind="show" id="nX4-rB-p66"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What kind of equation would you like to solve?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFJ-gC-Nz6">
+                                <rect key="frame" x="107" y="173" width="200" height="94"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="47z-Uh-AKJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uBa-lL-DM1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GFJ-gC-Nz6" firstAttribute="leading" secondItem="uBa-lL-DM1" secondAttribute="leading" constant="107" id="DZe-2P-faN"/>
+                            <constraint firstItem="GFJ-gC-Nz6" firstAttribute="top" secondItem="uBa-lL-DM1" secondAttribute="top" constant="85" id="TAT-ty-bCE"/>
+                            <constraint firstItem="BcW-9c-n80" firstAttribute="centerX" secondItem="uBa-lL-DM1" secondAttribute="centerX" id="b3m-Yo-SZX"/>
+                            <constraint firstItem="GFJ-gC-Nz6" firstAttribute="centerX" secondItem="BcW-9c-n80" secondAttribute="centerX" id="sYr-E9-Qtf"/>
+                            <constraint firstItem="BcW-9c-n80" firstAttribute="centerY" secondItem="uBa-lL-DM1" secondAttribute="centerY" id="txr-jE-rdi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gnb-dQ-MqU"/>
+                    <connections>
+                        <outlet property="DifficultyChange" destination="kBJ-WK-CYq" id="Vt0-r4-aji"/>
+                        <outlet property="EasyEquation1" destination="hfe-Xh-Fib" id="wXm-fy-9FO"/>
+                        <outlet property="EasyEquation2" destination="WJ0-S5-tJ9" id="xkm-zM-IHO"/>
+                        <outlet property="EasyEquation3" destination="ebD-M3-NAT" id="zcD-CI-Ysl"/>
+                        <outlet property="HeaderSecondView" destination="GFJ-gC-Nz6" id="VlF-HV-Yaq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEd-hA-zpm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713.0434782608697" y="123.88392857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VnL-TK-Ntc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IfE-0Y-hyn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uY1-cu-sLm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kF3-5w-Iwg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTo-d8-h7B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="123.88392857142857"/>
+        </scene>
+        <!--Equation Solve View Controller-->
+        <scene sceneID="bZV-qt-4Qd">
+            <objects>
+                <viewController id="Jn3-Cn-IVv" customClass="EquationSolveViewController" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K5R-e1-2sU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've chosen equation" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-a4-5KF">
+                                <rect key="frame" x="116.5" y="132.5" width="181.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cS0-Mk-HVY"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LCl-a4-5KF" firstAttribute="centerY" secondItem="cS0-Mk-HVY" secondAttribute="centerY" multiplier="0.3" id="NEb-7O-JXC"/>
+                            <constraint firstItem="LCl-a4-5KF" firstAttribute="centerX" secondItem="cS0-Mk-HVY" secondAttribute="centerX" id="bUZ-Ae-jAN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JvR-1D-NJr"/>
+                    <connections>
+                        <outlet property="EquationChoice" destination="LCl-a4-5KF" id="DRX-A7-e2Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXu-Wl-8a6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="124"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="U5D-HG-pgh"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
